@@ -1,0 +1,11 @@
+  These are sample CGI scripts and webpages for tinyhttpd.  They can
+be redistributed under the terms of the GPL.
+
+  The most impressive demonstration I gave of tinyhttpd to my
+professor and my classmates was to load color.cgi with a value of
+"chartreuse." :)  It's actually a very simple script, guys.
+
+jdb
+
+1将.cgi文件添加可执行属性 chmod a+x xx.cgi
+2修改.cgi文件的第一行,将其变为本地计算机的per程序地址,perl程序地址使用whereis perl查看
