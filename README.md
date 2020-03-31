@@ -5,7 +5,7 @@
 
 （3）继续listen端口
 
-# 处理请求
+### 处理请求
 
 （1）取出 HTTP 请求中的 method (GET 或 POST) 和 url。对于 GET 方法，如果有携带参数，则 query_string 指针指向 url 中 ？ 后面的 GET 参数。
 
