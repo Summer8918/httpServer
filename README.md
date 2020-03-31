@@ -5,7 +5,8 @@
 
 （3）继续listen端口
 
- 处理请求：
+# 处理请求
+
 （1）取出 HTTP 请求中的 method (GET 或 POST) 和 url。对于 GET 方法，如果有携带参数，则 query_string 指针指向 url 中 ？ 后面的 GET 参数。
 
 （2） 格式化 url 到 path 数组，表示浏览器请求的服务器文件路径，在 tinyhttpd 中服务器文件是在 htdocs 文件夹下。当 url 以 / 结尾，或 url 是个目录，则默认在 path 中加上 index.html，表示访问主页。
@@ -21,6 +22,9 @@
 （7） 在父进程中，关闭 cgi_input 的读取端 和 cgi_output 的写入端，如果 POST 的话，把 POST 数据写入 cgi_input，已被重定向到 STDIN，读取 cgi_output 的管道发送到客户端，该管道输入是 STDOUT。接着关闭所有管道，等待子进程结束。管道数据流如下图示：
 
 ![image](https://github.com/Summer8918/httpServer/blob/master/images/%E7%88%B6%E5%AD%90%E8%BF%9B%E7%A8%8B%E7%AE%A1%E9%81%93%E9%80%9A%E4%BF%A1.png)
+
+（8）关闭与浏览器的连接，完成了一次 HTTP 请求与响应。
+
 ## 函数
 startup: 初始化 httpd 服务，包括建立套接字，绑定端口，进行监听等。
 
