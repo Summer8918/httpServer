@@ -30,7 +30,7 @@ headers: 把 HTTP 响应的头部写到套接字。
 
 execute_cgi: 运行 cgi 程序的处理，也是个主要函数。
 
-bad_request: 返回给客户端这是个错误请求，HTTP 状态吗 400 BAD REQUEST.
+bad_request: 返回给客户端这是个错误请求，HTTP 状态码 400 BAD REQUEST.
 
 cannot_execute: 主要处理发生在执行 cgi 程序时出现的错误。
 
